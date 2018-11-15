@@ -1,3 +1,12 @@
+<!-- default file list -->
+*Files to look at*:
+
+* [Form1.cs](./CS/Form1.cs) (VB: [Form1.vb](./VB/Form1.vb))
+* [ImageStreamProvider.cs](./CS/ImageStreamProvider.cs) (VB: [ImageStreamProvider.vb](./VB/ImageStreamProvider.vb))
+* [MergeSimpleDataForm.cs](./CS/MergeSimpleDataForm.cs) (VB: [MergeSimpleDataForm.vb](./VB/MergeSimpleDataForm.vb))
+* [NorthwindDataProvider.cs](./CS/NorthwindDataProvider.cs) (VB: [NorthwindDataProvider.vb](./VB/NorthwindDataProvider.vb))
+* [Program.cs](./CS/Program.cs) (VB: [Program.vb](./VB/Program.vb))
+<!-- default file list end -->
 # How to use images when implementing the mail-merge functionality
 
 
