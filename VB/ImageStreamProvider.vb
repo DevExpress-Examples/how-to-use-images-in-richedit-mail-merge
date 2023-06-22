@@ -29,12 +29,8 @@ Namespace RichEditImageMailMerge
             If row Is Nothing Then Return Nothing
             Dim bytes As Byte() = TryCast(row(columnName), Byte())
             If bytes Is Nothing Then Return Nothing
-            ' Use this approach to trim the OLE header off the image
-            ' See also: http://www.devexpress.com/issue=Q233460, 
-            ' http://social.msdn.microsoft.com/Forums/en-US/sqldataaccess/thread/c37289c7-3ca5-458e-8eda-286ffa2ff966/
-            Dim memoryStream As MemoryStream = New MemoryStream()
-            Dim oleHeaderOffset As Integer = 78
-            memoryStream.Write(bytes, oleHeaderOffset, bytes.Length - oleHeaderOffset)
+
+            Dim memoryStream As MemoryStream = New MemoryStream(bytes)
             Return memoryStream
         End Function
 '#End Region  ' #iuristreamprovider

@@ -1,14 +1,14 @@
 ﻿using System.Data;
-using System.Data.SqlClient;
+using System.Data.OleDb;
 
 namespace RichEditImageMailMerge {
     public static class NorthwindDataProvider {
-        private static string connectionString = @"Data Source=.\SQLExpress;Initial Catalog=Northwind;Integrated Security=SSPI";
+        private static string connectionString = @"Provider=Microsoft.ACE.OLEDB.12.0;Data Source=|DataDirectory|\nwind.mdb;Persist Security Info=False;";
 
         static NorthwindDataProvider() {
-            using (SqlConnection connection = new SqlConnection(connectionString)) {
-                SqlCommand selectCommand = new SqlCommand("SELECT * FROM Categories", connection);
-                SqlDataAdapter da = new SqlDataAdapter(selectCommand);
+            using (OleDbConnection connection = new OleDbConnection(connectionString)) {
+                OleDbCommand selectCommand = new OleDbCommand("SELECT * FROM Categories", connection);
+                OleDbDataAdapter da = new OleDbDataAdapter(selectCommand);
 
                 categories = new DataTable("Categories");
 

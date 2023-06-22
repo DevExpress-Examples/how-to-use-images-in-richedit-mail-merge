@@ -25,201 +25,157 @@ namespace RichEditImageMailMerge {
         private void InitializeComponent() {
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
-            DevExpress.Utils.SuperToolTip superToolTip1 = new DevExpress.Utils.SuperToolTip();
-            DevExpress.Utils.ToolTipTitleItem toolTipTitleItem1 = new DevExpress.Utils.ToolTipTitleItem();
-            this.barManager1 = new DevExpress.XtraBars.BarManager(this.components);
-            this.mailMergeBar1 = new DevExpress.XtraRichEdit.UI.MailMergeBar();
-            this.insertMergeFieldItem1 = new DevExpress.XtraRichEdit.UI.InsertMergeFieldItem();
-            this.showAllFieldCodesItem1 = new DevExpress.XtraRichEdit.UI.ShowAllFieldCodesItem();
-            this.showAllFieldResultsItem1 = new DevExpress.XtraRichEdit.UI.ShowAllFieldResultsItem();
-            this.toggleViewMergedDataItem1 = new DevExpress.XtraRichEdit.UI.ToggleViewMergedDataItem();
-            this.mergeToNewDocumentItem = new DevExpress.XtraBars.BarButtonItem();
-            this.barDockControlTop = new DevExpress.XtraBars.BarDockControl();
-            this.barDockControlBottom = new DevExpress.XtraBars.BarDockControl();
-            this.barDockControlLeft = new DevExpress.XtraBars.BarDockControl();
-            this.barDockControlRight = new DevExpress.XtraBars.BarDockControl();
-            this.richEditBarController1 = new DevExpress.XtraRichEdit.UI.RichEditBarController();
             this.richEditControl1 = new DevExpress.XtraRichEdit.RichEditControl();
+            this.ribbonControl1 = new DevExpress.XtraBars.Ribbon.RibbonControl();
+            this.insertMergeFieldItem2 = new DevExpress.XtraRichEdit.UI.InsertMergeFieldItem();
+            this.showAllFieldCodesItem2 = new DevExpress.XtraRichEdit.UI.ShowAllFieldCodesItem();
+            this.showAllFieldResultsItem2 = new DevExpress.XtraRichEdit.UI.ShowAllFieldResultsItem();
+            this.toggleViewMergedDataItem2 = new DevExpress.XtraRichEdit.UI.ToggleViewMergedDataItem();
+            this.mailingsRibbonPage1 = new DevExpress.XtraRichEdit.UI.MailingsRibbonPage();
+            this.mailMergeRibbonPageGroup1 = new DevExpress.XtraRichEdit.UI.MailMergeRibbonPageGroup();
+            this.richEditBarController1 = new DevExpress.XtraRichEdit.UI.RichEditBarController(this.components);
+            this.ribbonPage2 = new DevExpress.XtraBars.Ribbon.RibbonPage();
             this.dataNavigator1 = new DevExpress.XtraEditors.DataNavigator();
-            ((System.ComponentModel.ISupportInitialize)(this.barManager1)).BeginInit();
+            this.mergeToNewDocumentItem = new DevExpress.XtraBars.BarButtonItem();
+            ((System.ComponentModel.ISupportInitialize)(this.ribbonControl1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.richEditBarController1)).BeginInit();
             this.SuspendLayout();
             // 
-            // barManager1
+            // richEditControl1
             // 
-            this.barManager1.Bars.AddRange(new DevExpress.XtraBars.Bar[] {
-            this.mailMergeBar1});
-            this.barManager1.DockControls.Add(this.barDockControlTop);
-            this.barManager1.DockControls.Add(this.barDockControlBottom);
-            this.barManager1.DockControls.Add(this.barDockControlLeft);
-            this.barManager1.DockControls.Add(this.barDockControlRight);
-            this.barManager1.Form = this;
-            this.barManager1.Items.AddRange(new DevExpress.XtraBars.BarItem[] {
-            this.insertMergeFieldItem1,
-            this.showAllFieldCodesItem1,
-            this.showAllFieldResultsItem1,
-            this.toggleViewMergedDataItem1,
+            this.richEditControl1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.richEditControl1.Location = new System.Drawing.Point(0, 193);
+            this.richEditControl1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.richEditControl1.MenuManager = this.ribbonControl1;
+            this.richEditControl1.Name = "richEditControl1";
+            this.richEditControl1.Options.DocumentSaveOptions.CurrentFormat = DevExpress.XtraRichEdit.DocumentFormat.PlainText;
+            this.richEditControl1.Size = new System.Drawing.Size(1223, 558);
+            this.richEditControl1.TabIndex = 0;
+            this.richEditControl1.DocumentLoaded += new System.EventHandler(this.richEditControl1_DocumentLoaded);
+            // 
+            // ribbonControl1
+            // 
+            this.ribbonControl1.EmptyAreaImageOptions.ImagePadding = new System.Windows.Forms.Padding(26, 30, 26, 30);
+            this.ribbonControl1.ExpandCollapseItem.Id = 0;
+            this.ribbonControl1.Items.AddRange(new DevExpress.XtraBars.BarItem[] {
+            this.ribbonControl1.ExpandCollapseItem,
+            this.ribbonControl1.SearchEditItem,
+            this.insertMergeFieldItem2,
+            this.showAllFieldCodesItem2,
+            this.showAllFieldResultsItem2,
+            this.toggleViewMergedDataItem2,
             this.mergeToNewDocumentItem});
-            this.barManager1.MaxItemId = 7;
+            this.ribbonControl1.Location = new System.Drawing.Point(0, 0);
+            this.ribbonControl1.MaxItemId = 6;
+            this.ribbonControl1.Name = "ribbonControl1";
+            this.ribbonControl1.OptionsMenuMinWidth = 289;
+            this.ribbonControl1.Pages.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPage[] {
+            this.mailingsRibbonPage1});
+            this.ribbonControl1.Size = new System.Drawing.Size(1223, 193);
             // 
-            // mailMergeBar1
+            // insertMergeFieldItem2
             // 
-            this.mailMergeBar1.DockCol = 0;
-            this.mailMergeBar1.DockRow = 0;
-            this.mailMergeBar1.DockStyle = DevExpress.XtraBars.BarDockStyle.Top;
-            this.mailMergeBar1.LinksPersistInfo.AddRange(new DevExpress.XtraBars.LinkPersistInfo[] {
-            new DevExpress.XtraBars.LinkPersistInfo(this.insertMergeFieldItem1),
-            new DevExpress.XtraBars.LinkPersistInfo(this.showAllFieldCodesItem1),
-            new DevExpress.XtraBars.LinkPersistInfo(this.showAllFieldResultsItem1),
-            new DevExpress.XtraBars.LinkPersistInfo(this.toggleViewMergedDataItem1),
-            new DevExpress.XtraBars.LinkPersistInfo(this.mergeToNewDocumentItem)});
-            this.mailMergeBar1.OptionsBar.MultiLine = true;
-            this.mailMergeBar1.OptionsBar.UseWholeRow = true;
+            this.insertMergeFieldItem2.Id = 1;
+            this.insertMergeFieldItem2.Name = "insertMergeFieldItem2";
             // 
-            // insertMergeFieldItem1
+            // showAllFieldCodesItem2
             // 
-            this.insertMergeFieldItem1.Glyph = ((System.Drawing.Image)(resources.GetObject("insertMergeFieldItem1.Glyph")));
-            this.insertMergeFieldItem1.Id = 0;
-            this.insertMergeFieldItem1.LargeGlyph = ((System.Drawing.Image)(resources.GetObject("insertMergeFieldItem1.LargeGlyph")));
-            this.insertMergeFieldItem1.Name = "insertMergeFieldItem1";
+            this.showAllFieldCodesItem2.Id = 2;
+            this.showAllFieldCodesItem2.Name = "showAllFieldCodesItem2";
             // 
-            // showAllFieldCodesItem1
+            // showAllFieldResultsItem2
             // 
-            this.showAllFieldCodesItem1.Glyph = ((System.Drawing.Image)(resources.GetObject("showAllFieldCodesItem1.Glyph")));
-            this.showAllFieldCodesItem1.Id = 1;
-            this.showAllFieldCodesItem1.LargeGlyph = ((System.Drawing.Image)(resources.GetObject("showAllFieldCodesItem1.LargeGlyph")));
-            this.showAllFieldCodesItem1.Name = "showAllFieldCodesItem1";
+            this.showAllFieldResultsItem2.Id = 3;
+            this.showAllFieldResultsItem2.Name = "showAllFieldResultsItem2";
             // 
-            // showAllFieldResultsItem1
+            // toggleViewMergedDataItem2
             // 
-            this.showAllFieldResultsItem1.Glyph = ((System.Drawing.Image)(resources.GetObject("showAllFieldResultsItem1.Glyph")));
-            this.showAllFieldResultsItem1.Id = 2;
-            this.showAllFieldResultsItem1.LargeGlyph = ((System.Drawing.Image)(resources.GetObject("showAllFieldResultsItem1.LargeGlyph")));
-            this.showAllFieldResultsItem1.Name = "showAllFieldResultsItem1";
+            this.toggleViewMergedDataItem2.Id = 4;
+            this.toggleViewMergedDataItem2.Name = "toggleViewMergedDataItem2";
             // 
-            // toggleViewMergedDataItem1
+            // mailingsRibbonPage1
             // 
-            this.toggleViewMergedDataItem1.Glyph = ((System.Drawing.Image)(resources.GetObject("toggleViewMergedDataItem1.Glyph")));
-            this.toggleViewMergedDataItem1.Id = 3;
-            this.toggleViewMergedDataItem1.LargeGlyph = ((System.Drawing.Image)(resources.GetObject("toggleViewMergedDataItem1.LargeGlyph")));
-            this.toggleViewMergedDataItem1.Name = "toggleViewMergedDataItem1";
+            this.mailingsRibbonPage1.Groups.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPageGroup[] {
+            this.mailMergeRibbonPageGroup1});
+            this.mailingsRibbonPage1.Name = "mailingsRibbonPage1";
             // 
-            // mergeToNewDocumentItem
+            // mailMergeRibbonPageGroup1
             // 
-            this.mergeToNewDocumentItem.Caption = "Merge to New Document";
-            this.mergeToNewDocumentItem.Glyph = ((System.Drawing.Image)(resources.GetObject("mergeToNewDocumentItem.Glyph")));
-            this.mergeToNewDocumentItem.Id = 6;
-            this.mergeToNewDocumentItem.Name = "mergeToNewDocumentItem";
-            toolTipTitleItem1.Text = "Merge to New Document";
-            superToolTip1.Items.Add(toolTipTitleItem1);
-            this.mergeToNewDocumentItem.SuperTip = superToolTip1;
-            this.mergeToNewDocumentItem.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.mergeToNewDocumentItem_ItemClick);
-            // 
-            // barDockControlTop
-            // 
-            this.barDockControlTop.CausesValidation = false;
-            this.barDockControlTop.Dock = System.Windows.Forms.DockStyle.Top;
-            this.barDockControlTop.Location = new System.Drawing.Point(0, 0);
-            this.barDockControlTop.Margin = new System.Windows.Forms.Padding(4);
-            this.barDockControlTop.Size = new System.Drawing.Size(1134, 35);
-            // 
-            // barDockControlBottom
-            // 
-            this.barDockControlBottom.CausesValidation = false;
-            this.barDockControlBottom.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.barDockControlBottom.Location = new System.Drawing.Point(0, 489);
-            this.barDockControlBottom.Margin = new System.Windows.Forms.Padding(4);
-            this.barDockControlBottom.Size = new System.Drawing.Size(1134, 0);
-            // 
-            // barDockControlLeft
-            // 
-            this.barDockControlLeft.CausesValidation = false;
-            this.barDockControlLeft.Dock = System.Windows.Forms.DockStyle.Left;
-            this.barDockControlLeft.Location = new System.Drawing.Point(0, 35);
-            this.barDockControlLeft.Margin = new System.Windows.Forms.Padding(4);
-            this.barDockControlLeft.Size = new System.Drawing.Size(0, 454);
-            // 
-            // barDockControlRight
-            // 
-            this.barDockControlRight.CausesValidation = false;
-            this.barDockControlRight.Dock = System.Windows.Forms.DockStyle.Right;
-            this.barDockControlRight.Location = new System.Drawing.Point(1134, 35);
-            this.barDockControlRight.Margin = new System.Windows.Forms.Padding(4);
-            this.barDockControlRight.Size = new System.Drawing.Size(0, 454);
+            this.mailMergeRibbonPageGroup1.CaptionButtonVisible = DevExpress.Utils.DefaultBoolean.False;
+            this.mailMergeRibbonPageGroup1.ItemLinks.Add(this.insertMergeFieldItem2);
+            this.mailMergeRibbonPageGroup1.ItemLinks.Add(this.showAllFieldCodesItem2);
+            this.mailMergeRibbonPageGroup1.ItemLinks.Add(this.showAllFieldResultsItem2);
+            this.mailMergeRibbonPageGroup1.ItemLinks.Add(this.toggleViewMergedDataItem2, "P");
+            this.mailMergeRibbonPageGroup1.ItemLinks.Add(this.mergeToNewDocumentItem);
+            this.mailMergeRibbonPageGroup1.Name = "mailMergeRibbonPageGroup1";
             // 
             // richEditBarController1
             // 
-            this.richEditBarController1.BarItems.Add(this.insertMergeFieldItem1);
-            this.richEditBarController1.BarItems.Add(this.showAllFieldCodesItem1);
-            this.richEditBarController1.BarItems.Add(this.showAllFieldResultsItem1);
-            this.richEditBarController1.BarItems.Add(this.toggleViewMergedDataItem1);
-            this.richEditBarController1.RichEditControl = this.richEditControl1;
+            this.richEditBarController1.BarItems.Add(this.insertMergeFieldItem2);
+            this.richEditBarController1.BarItems.Add(this.showAllFieldCodesItem2);
+            this.richEditBarController1.BarItems.Add(this.showAllFieldResultsItem2);
+            this.richEditBarController1.BarItems.Add(this.toggleViewMergedDataItem2);
+            this.richEditBarController1.Control = this.richEditControl1;
             // 
-            // richEditControl1
+            // ribbonPage2
             // 
-            this.richEditControl1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
-                        | System.Windows.Forms.AnchorStyles.Left)
-                        | System.Windows.Forms.AnchorStyles.Right)));
-            this.richEditControl1.Location = new System.Drawing.Point(15, 38);
-            this.richEditControl1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.richEditControl1.MenuManager = this.barManager1;
-            this.richEditControl1.Name = "richEditControl1";
-            this.richEditControl1.Size = new System.Drawing.Size(1105, 405);
-            this.richEditControl1.TabIndex = 0;
-            this.richEditControl1.Text = "richEditControl1";
-            this.richEditControl1.DocumentLoaded += new System.EventHandler(this.richEditControl1_DocumentLoaded);
+            this.ribbonPage2.Name = "ribbonPage2";
+            this.ribbonPage2.Text = "ribbonPage2";
             // 
             // dataNavigator1
             // 
-            this.dataNavigator1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)
-                        | System.Windows.Forms.AnchorStyles.Right)));
             this.dataNavigator1.Buttons.Append.Visible = false;
             this.dataNavigator1.Buttons.CancelEdit.Visible = false;
             this.dataNavigator1.Buttons.EndEdit.Visible = false;
             this.dataNavigator1.Buttons.NextPage.Visible = false;
             this.dataNavigator1.Buttons.PrevPage.Visible = false;
             this.dataNavigator1.Buttons.Remove.Visible = false;
-            this.dataNavigator1.Location = new System.Drawing.Point(15, 449);
+            this.dataNavigator1.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.dataNavigator1.Location = new System.Drawing.Point(0, 751);
             this.dataNavigator1.Margin = new System.Windows.Forms.Padding(4);
             this.dataNavigator1.Name = "dataNavigator1";
-            this.dataNavigator1.Size = new System.Drawing.Size(1104, 30);
+            this.dataNavigator1.Size = new System.Drawing.Size(1223, 30);
             this.dataNavigator1.TabIndex = 4;
             this.dataNavigator1.Text = "dataNavigator1";
             // 
+            // mergeToNewDocumentItem
+            // 
+            this.mergeToNewDocumentItem.Caption = "Merge to New Document";
+            this.mergeToNewDocumentItem.Id = 5;
+            this.mergeToNewDocumentItem.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("mergeToNewDocumentItem.ImageOptions.SvgImage")));
+            this.mergeToNewDocumentItem.Name = "mergeToNewDocumentItem";
+            this.mergeToNewDocumentItem.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.mergeToNewDocumentItem_ItemClick);
+            // 
             // Form1
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1134, 489);
-            this.Controls.Add(this.dataNavigator1);
+            this.ClientSize = new System.Drawing.Size(1223, 781);
             this.Controls.Add(this.richEditControl1);
-            this.Controls.Add(this.barDockControlLeft);
-            this.Controls.Add(this.barDockControlRight);
-            this.Controls.Add(this.barDockControlBottom);
-            this.Controls.Add(this.barDockControlTop);
+            this.Controls.Add(this.dataNavigator1);
+            this.Controls.Add(this.ribbonControl1);
             this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "Form1";
+            this.Ribbon = this.ribbonControl1;
             this.Text = "Form1";
-            ((System.ComponentModel.ISupportInitialize)(this.barManager1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ribbonControl1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.richEditBarController1)).EndInit();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
         #endregion
-
-        private DevExpress.XtraBars.BarManager barManager1;
-        private DevExpress.XtraBars.BarDockControl barDockControlTop;
-        private DevExpress.XtraBars.BarDockControl barDockControlBottom;
-        private DevExpress.XtraBars.BarDockControl barDockControlLeft;
-        private DevExpress.XtraBars.BarDockControl barDockControlRight;
-        private DevExpress.XtraRichEdit.UI.MailMergeBar mailMergeBar1;
-        private DevExpress.XtraRichEdit.UI.InsertMergeFieldItem insertMergeFieldItem1;
-        private DevExpress.XtraRichEdit.UI.ShowAllFieldCodesItem showAllFieldCodesItem1;
-        private DevExpress.XtraRichEdit.UI.ShowAllFieldResultsItem showAllFieldResultsItem1;
-        private DevExpress.XtraRichEdit.UI.ToggleViewMergedDataItem toggleViewMergedDataItem1;
         private DevExpress.XtraRichEdit.UI.RichEditBarController richEditBarController1;
         private DevExpress.XtraRichEdit.RichEditControl richEditControl1;
+        private DevExpress.XtraBars.Ribbon.RibbonControl ribbonControl1;
+        private DevExpress.XtraBars.Ribbon.RibbonPage ribbonPage2;
+        private DevExpress.XtraRichEdit.UI.InsertMergeFieldItem insertMergeFieldItem2;
+        private DevExpress.XtraRichEdit.UI.ShowAllFieldCodesItem showAllFieldCodesItem2;
+        private DevExpress.XtraRichEdit.UI.ShowAllFieldResultsItem showAllFieldResultsItem2;
+        private DevExpress.XtraRichEdit.UI.ToggleViewMergedDataItem toggleViewMergedDataItem2;
+        private DevExpress.XtraRichEdit.UI.MailingsRibbonPage mailingsRibbonPage1;
+        private DevExpress.XtraRichEdit.UI.MailMergeRibbonPageGroup mailMergeRibbonPageGroup1;
         private DevExpress.XtraEditors.DataNavigator dataNavigator1;
         private DevExpress.XtraBars.BarButtonItem mergeToNewDocumentItem;
     }

@@ -31,13 +31,7 @@ namespace RichEditImageMailMerge {
             if (bytes == null)
                 return null;
 
-            // Use this approach to trim the OLE header off the image
-            // See also: http://www.devexpress.com/issue=Q233460, 
-            // http://social.msdn.microsoft.com/Forums/en-US/sqldataaccess/thread/c37289c7-3ca5-458e-8eda-286ffa2ff966/
-            MemoryStream memoryStream = new MemoryStream();
-            int oleHeaderOffset = 78;
-            memoryStream.Write(bytes, oleHeaderOffset, bytes.Length - oleHeaderOffset);
-
+            MemoryStream memoryStream = new MemoryStream(bytes);
             return memoryStream;
         }
 
