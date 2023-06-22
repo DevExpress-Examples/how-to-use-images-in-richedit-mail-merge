@@ -19,9 +19,7 @@ The `INCLUDEPICTURE` field in the template has a nested `MERGEFIELD` that refers
 
 * [Form1.cs](./CS/Form1.cs) (VB: [Form1.vb](./VB/Form1.vb))
 * [ImageStreamProvider.cs](./CS/ImageStreamProvider.cs) (VB: [ImageStreamProvider.vb](./VB/ImageStreamProvider.vb))
-* [MergeSimpleDataForm.cs](./CS/MergeSimpleDataForm.cs) (VB: [MergeSimpleDataForm.vb](./VB/MergeSimpleDataForm.vb))
 * [NorthwindDataProvider.cs](./CS/NorthwindDataProvider.cs) (VB: [NorthwindDataProvider.vb](./VB/NorthwindDataProvider.vb))
-* [Program.cs](./CS/Program.cs) (VB: [Program.vb](./VB/Program.vb))
 
 ## More Examples
 
