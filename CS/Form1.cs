@@ -3,7 +3,6 @@ using System.Diagnostics;
 using System.Windows.Forms;
 using DevExpress.XtraRichEdit;
 using DevExpress.XtraRichEdit.API.Native;
-using DevExpress.XtraRichEdit.Services;
 using DevExpress.Office.Services;
 
 namespace RichEditImageMailMerge
@@ -15,7 +14,7 @@ namespace RichEditImageMailMerge
             InitializeComponent();
 
             RegisterUriStreamService(richEditControl1);
-            richEditControl1.LoadDocument(Application.StartupPath + @"\..\..\" + "MailMergeTemplate.rtf");
+            richEditControl1.LoadDocument(Application.StartupPath + @"MailMergeTemplate.rtf");
         }
 
         private void richEditControl1_DocumentLoaded(object sender, EventArgs e)
@@ -42,11 +41,16 @@ namespace RichEditImageMailMerge
         {
             MailMergeOptions options = richEditControl1.Document.CreateMailMergeOptions();
             options.MergeMode = MergeMode.NewSection;
-            string fileName = System.IO.Directory.GetCurrentDirectory() + @"\..\..\MailMergeResult.rtf";
+            string fileName = System.IO.Directory.GetCurrentDirectory() + @"MailMergeResult.rtf";
 
             richEditControl1.Document.MailMerge(options, fileName, DocumentFormat.Rtf);
 
-            Process.Start(fileName);
+            var p = new Process();
+            p.StartInfo = new ProcessStartInfo(fileName)
+            {
+                UseShellExecute = true
+            };
+            p.Start();
         }
         #endregion Mail-merge the document
     }

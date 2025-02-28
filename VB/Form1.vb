@@ -13,7 +13,7 @@ Namespace RichEditImageMailMerge
         Public Sub New()
             InitializeComponent()
             RegisterUriStreamService(richEditControl1)
-            richEditControl1.LoadDocument(Application.StartupPath & "\..\..\" & "MailMergeTemplate.rtf")
+            richEditControl1.LoadDocument(Application.StartupPath & "MailMergeTemplate.rtf")
         End Sub
 
         Private Sub richEditControl1_DocumentLoaded(ByVal sender As Object, ByVal e As EventArgs) Handles richEditControl1.DocumentLoaded
@@ -34,9 +34,11 @@ Namespace RichEditImageMailMerge
         Private Sub MergeToNewDocument()
             Dim options As MailMergeOptions = richEditControl1.Document.CreateMailMergeOptions()
             options.MergeMode = MergeMode.NewSection
-            Dim fileName As String = System.IO.Directory.GetCurrentDirectory() & "\..\..\MailMergeResult.rtf"
+            Dim fileName As String = System.IO.Directory.GetCurrentDirectory() & "MailMergeResult.rtf"
             richEditControl1.Document.MailMerge(options, fileName, DocumentFormat.Rtf)
-            Process.Start(fileName)
+            Dim processor As New Process()
+            processor.StartInfo = New ProcessStartInfo(fileName) With {.UseShellExecute = True}
+            processor.Start()
         End Sub
     End Class
 End Namespace
